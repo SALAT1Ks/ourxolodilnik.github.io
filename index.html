@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Подключаем библиотеку jQuery -->
+<style>
+  body {
+    background-image: url(https://media.discordapp.net/attachments/703179103276105728/1208159401148420178/fdsfsfdsfsdfsdfsdfsad.png?ex=65e2451f&is=65cfd01f&hm=5cfa029b6a0969af7a4671980da3c79a33869b630578c9b4307164f676b6391d&=&format=webp&quality=lossless&width=1193&height=671);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  input[type="text"] {
+    padding: 10px; /* Внутренний отступ */
+    font-size: 16px; /* Размер шрифта */
+  }
+
+</style>
+</head>
+<body>
+
+
+
+<h5></h5>
+  <button class="button" id="button1" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h6></h6>
+  <button class="button" id="button2" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h7></h7>
+  <button class="button" id="button3" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h8></h8>
+  <button class="button" id="button4" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h9></h9>
+  <button class="button" id="button5" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h10></h10>
+  <button class="button" id="button6" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
+<h1></h1>
+<!-- Первое поле ввода -->
+<input type="text" id="userInput1" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 150px;">
+
+<h2></h2>
+<!-- Первое поле ввода -->
+<input type="text" id="userInput2" placeholder="Введите текст" style="margin-left: 1400px; margin-top: 250px;">
+
+<h3></h3>
+<!-- Первое поле ввода -->
+<input type="text" id="userInput3" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 165px;">
+
+<h4></h4>
+<!-- Первое поле ввода -->
+<input type="text" id="userInput4" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 100px;">
+
+
+
+
+    <div id=""></div>
+    <script>
+        // Функция для отправки данных при нажатии на кнопку 1
+        $('#button1').on('click', function() {
+            $.ajax({
+                type: 'POST',
+                url: '/button1_clicked', // URL для отправки данных на сервер Flask
+                success: function(response) {
+                    console.log("Кнопка 1 нажата:", response); // Выводим ответ от сервера в консоль браузера
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ошибка при отправке данных на сервер Flask:", error); // Выводим сообщение об ошибке в консоль браузера
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        // Функция для отправки данных при изменении первого поля ввода
+        $('#userInput1').on('input', function() {
+            var userInput1 = $(this).val(); // Получаем значение из первого поля ввода
+            $.ajax({
+                type: 'POST',
+                url: '/start_countdown', // URL для отправки данных на сервер Flask
+                data: { userInput1: userInput1 }, // Данные для отправки (значение из первого поля ввода)
+                success: function(response) {
+                    console.log("Данные из первого поля успешно переданы на сервер:", response); // Выводим ответ от сервера в консоль браузера
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ошибка при передаче данных из первого поля на сервер:", error); // Выводим сообщение об ошибке в консоль браузера
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Функция для отправки данных при изменении второго поля ввода
+        $('#userInput2').on('input', function() {
+            var userInput2 = $(this).val(); // Получаем значение из второго поля ввода
+            $.ajax({
+                type: 'POST',
+                url: '/another_endpoint', // URL для отправки данных на другой сервер Flask
+                data: { userInput2: userInput2 }, // Данные для отправки (значение из второго поля ввода)
+                success: function(response) {
+                    console.log("Данные из второго поля успешно переданы на другой сервер:", response); // Выводим ответ от сервера в консоль браузера
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ошибка при передаче данных из второго поля на другой сервер:", error); // Выводим сообщение об ошибке в консоль браузера
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        // Функция для отправки данных при изменении второго поля ввода
+        $('#userInput3').on('input', function() {
+            var userInput3 = $(this).val(); // Получаем значение из второго поля ввода
+            $.ajax({
+                type: 'POST',
+                url: '/another_endpoint', // URL для отправки данных на другой сервер Flask
+                data: { userInput3: userInput3 }, // Данные для отправки (значение из второго поля ввода)
+                success: function(response) {
+                    console.log("Данные из второго поля успешно переданы на другой сервер:", response); // Выводим ответ от сервера в консоль браузера
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ошибка при передаче данных из второго поля на другой сервер:", error); // Выводим сообщение об ошибке в консоль браузера
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        // Функция для отправки данных при изменении второго поля ввода
+        $('#userInput4').on('input', function() {
+            var userInput4 = $(this).val(); // Получаем значение из второго поля ввода
+            $.ajax({
+                type: 'POST',
+                url: '/another_endpoint', // URL для отправки данных на другой сервер Flask
+                data: { userInput4: userInput4 }, // Данные для отправки (значение из второго поля ввода)
+                success: function(response) {
+                    console.log("Данные из второго поля успешно переданы на другой сервер:", response); // Выводим ответ от сервера в консоль браузера
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ошибка при передаче данных из второго поля на другой сервер:", error); // Выводим сообщение об ошибке в консоль браузера
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body>
+</html>
