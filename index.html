@@ -6,53 +6,70 @@
 <title>Countdown</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Подключаем библиотеку jQuery -->
 <style>
-  body {
-    background-image: url(https://media.discordapp.net/attachments/703179103276105728/1208159401148420178/fdsfsfdsfsdfsdfsdfsad.png?ex=65e2451f&is=65cfd01f&hm=5cfa029b6a0969af7a4671980da3c79a33869b630578c9b4307164f676b6391d&=&format=webp&quality=lossless&width=1193&height=671);
+body {
+    background-image: url(https://i.ibb.co/5MWvx4W/image.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+    background-size: 100% 105%; /* Или другие размеры, которые вы предпочитаете */
+}
+
 
   input[type="text"] {
     padding: 10px; /* Внутренний отступ */
     font-size: 16px; /* Размер шрифта */
   }
 
+   #imageContainer {
+    position: absolute; /* Устанавливаем абсолютное позиционирование */
+    top: 50%; /* Располагаем верхний край контейнера в середине страницы */
+    left: 50%; /* Располагаем левый край контейнера в середине страницы */
+    transform: translate(-50%, -50%); /* Сдвигаем контейнер на половину его ширины и высоты, чтобы центрировать его точку центра */
+    width: 100px; /* Фиксированная ширина контейнера */
+    height: 100px; /* Фиксированная высота контейнера */
+    overflow: hidden; /* Обрезаем изображение, если оно выходит за границы контейнера */
+    }
+
+    img {
+    width: 100%; /* Чтобы изображение занимало всю доступную ширину контейнера */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции изображения */
+    display: block; /* Устанавливаем изображение как блочный элемент */
+    }
+
+    #uploadButton {
+    margin-top: 20px; /* Отступ сверху */
+    display: block; /* Размещаем кнопку в виде блока, чтобы она занимала всю доступную ширину */
+    }
+
 </style>
 </head>
 <body>
 
 
+<button class="button" id="button1" style="position: absolute; top: 18px; left: 1605px; width: 60px; height: 55px; transform: rotate(-3deg)">Кнопка 1</button>
+<button class="button" id="button2" style="position: absolute; top: 90px; left: 1610px; width: 60px; height: 55px; transform: rotate(-3deg)">Кнопка 1</button>
+<button class="button" id="button3" style="position: absolute; top: 168px; left: 1618px; width: 60px; height: 55px; transform: rotate(-3deg)">Кнопка 1</button>
 
-<h5></h5>
-  <button class="button" id="button1" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h6></h6>
-  <button class="button" id="button2" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h7></h7>
-  <button class="button" id="button3" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h8></h8>
-  <button class="button" id="button4" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h9></h9>
-  <button class="button" id="button5" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h10></h10>
-  <button class="button" id="button6" style="margin-left: 300px; margin-top: 0px;">Кнопка 1</button>
-<h1></h1>
-<!-- Первое поле ввода -->
-<input type="text" id="userInput1" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 150px;">
+<input type="text" id="userInput1" placeholder="Введите текст" style="position: absolute; top: 168px; left: 980px; width: 250px; height: 30px;">
+<button class="button" id="button4" style="position: absolute; top: 242px; left: 1623px; width: 60px; height: 55px; transform: rotate(-3deg)">Кнопка 1</button>
+<input type="file" id="uploadButton" accept="image/*" style="position: absolute; ">
+<div id="imageContainer" style="position: absolute;"></div>
+<input type="text" id="userInput2" placeholder="Введите текст" style="position: absolute; top: 415px; left: 1400px; width: 380px; height: 15px; transform: rotate(-1deg) " >
+<button class="button" id="button5" style="position: absolute; top: 565px; left: 310px; width: 455px; height: 80px;">Кнопка 1</button>
+<input type="text" id="userInput3" placeholder="Введите текст" style="position: absolute; margin-left: 140px; margin-top: 140px;">
+<input type="text" id="userInput4" placeholder="Введите текст" style=" margin-left: 160px; margin-top: 200px;">
+<button class="button" id="button6" style="margin-left: 0px; margin-top: 860px;">Кнопка 1</button>
 
-<h2></h2>
-<!-- Первое поле ввода -->
-<input type="text" id="userInput2" placeholder="Введите текст" style="margin-left: 1400px; margin-top: 250px;">
 
-<h3></h3>
-<!-- Первое поле ввода -->
-<input type="text" id="userInput3" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 165px;">
 
-<h4></h4>
-<!-- Первое поле ввода -->
-<input type="text" id="userInput4" placeholder="Введите текст" style="margin-left: 1000px; margin-top: 100px;">
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,6 +109,7 @@
             });
         });
     </script>
+
 
     <script>
         // Функция для отправки данных при изменении второго поля ввода
@@ -149,7 +167,44 @@
         });
     </script>
 
+<script>
+    document.getElementById('uploadButton').addEventListener('change', function(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(event) {
+        var imageUrl = event.target.result;
+        var imageContainer = document.getElementById('imageContainer');
+        // Очищаем контейнер перед добавлением нового изображения
+        imageContainer.innerHTML = '';
+        var imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+        imageContainer.appendChild(imageElement);
+      };
+      reader.readAsDataURL(file);
+    });
 
+    // Добавление изображения из буфера обмена
+    document.addEventListener('paste', function(event) {
+      var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+      for (index in items) {
+        var item = items[index];
+        if (item.kind === 'file' && item.type.includes('image')) {
+          var file = item.getAsFile();
+          var reader = new FileReader();
+          reader.onload = function(event) {
+            var imageUrl = event.target.result;
+            var imageContainer = document.getElementById('imageContainer');
+            // Очищаем контейнер перед добавлением нового изображения
+            imageContainer.innerHTML = '';
+            var imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageContainer.appendChild(imageElement);
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    });
+  </script>
 
 
 
