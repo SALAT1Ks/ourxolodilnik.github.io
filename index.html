@@ -13,7 +13,7 @@
 body {
     background-image: url(https://i.ibb.co/5MWvx4W/image.png);
     background-repeat: no-repeat;
-    background-size: 100% 105%; /* Или другие размеры, которые вы предпочитаете */
+    background-size: 100vw 100vh;
 }
 
 input[type="text"] {
@@ -81,49 +81,42 @@ img {
 </head>
 <body>
 
-<button onclick="toggleImage()" class="button" id="button1" style="position: absolute; top: 18px; left: 1605px; width: 60px; height: 55px; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
+<button onclick="toggleImage()" class="button" id="button1" style="position: absolute; top: 2%; left: 83.6%; width: 3%; height: 6%; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
 
-<div id="imageContainerPhoto" style="position: absolute; top: 300px; left: 550px; width: 300px; height: 300px;"></div>
+<div id="imageContainerPhoto" style="position: absolute; top: 100px; left: 550px; width: 300px; height: 300px;"></div>
 
-<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage" style="display: none; position: absolute; top: 18px; left: 1605px; width: 60px; height: 55px; transform: rotate(-3deg)">
+<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage" style="display: none; position: absolute; top: 2%; left: 83.6%; width: 3%; height: 6%; transform: rotate(-3deg)">
 
-<button onclick="toggleImage1()" class="button" id="button2" style="position: absolute; top: 90px; left: 1610px; width: 60px; height: 55px; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
-<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage1" style="display: none; position: absolute; top: 90px; left: 1610px; width: 60px; height: 55px; transform: rotate(-3deg)">
-
-
-<button onclick='toggleImage2()' class="button" id="button3" style="position: absolute; top: 168px; left: 1618px; width: 60px; height: 55px; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
-<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage2" style="display: none; position: absolute; top: 168px; left: 1618px; width: 60px; height: 55px; transform: rotate(-3deg)">
+<button onclick="toggleImage1()" class="button" id="button2" style="position: absolute; top: 9%; left: 84%; width: 3%; height: 6%; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
+<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage1" style="display: none; position: absolute; top: 9%; left: 84%; width: 3%; height: 6%; transform: rotate(-3deg)">
 
 
-
-<input type="text" id="userInput1" class="custom-font" placeholder="Введите количество Ккалорий..." style="position: absolute; top: 168px; left: 980px; width: 250px; height: 30px; background-color: transparent; border: none;">
-
-
-<button onclick='toggleImage3()' class="button" id="button4" style="position: absolute; top: 242px; left: 1623px; width: 60px; height: 55px; opacity: 0; transform: rotate(-3deg)">Кнопка 4</button>
-<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage3" style="display: none; position: absolute; top: 242px; left: 1623px; width: 60px; height: 55px; transform: rotate(-3deg)">
+<button onclick='toggleImage2()' class="button" id="button3" style="position: absolute; top: 17%; left: 84.3%; width: 3%; height: 6%; opacity: 0; transform: rotate(-3deg)">Кнопка 1</button>
+<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage2" style="display: none; position: absolute; top: 17%; left: 84.3%; width: 3%; height: 6%; transform: rotate(-3deg)">
 
 
 
-<input type="file" id="uploadButton" accept="image/*" style="position: absolute; top: 485px; left: 370px; width: 340px; opacity: 0; background-color: transparent; border: none; height: 55px">
+<input type="text" id="userInput1" class="custom-font" placeholder="Введите количество Ккалорий..." style="position: absolute; top: 20%; left: 50%; width: 15%; height: 3%; background-color: transparent; border: none;">
 
-<div id="imageContainer" style="position: absolute; top: 300px; left: 550px; width: 300px; height: 300px; "></div>
 
-<input type="text" id="userInput2" placeholder="Мои пожелание таковы!" style="position: absolute; top: 415px; left: 1400px; width: 380px; height: 15px; transform: rotate(-1deg); background-color: transparent; border: none; " >
-
-<button class="button" id="button5" style="position: absolute; top: 565px; left: 310px; width: 455px; opacity: 0; height: 80px;">Кнопка 5</button>
-
-<input type="text" id="userInput3" placeholder="Введите количество минут..." style="position: absolute; top: 650px; left: 980px; width: 280px; height: 15px; transform: rotate(-8deg); background-color: transparent; border: none;">
-
-<input type="text" id="userInput4" placeholder="Введите название блюда..." style="position: absolute; top: 750px; left: 990px; width: 280px; height: 15px; transform: rotate(-8deg); background-color: transparent; border: none;">
-
-<button class="button" id="button6" style="position: absolute; top: 830px; left: 1050px; width: 215px; opacity: 0; height: 85px;">Кнопка 2</button>
-
-<button class="button" id="button_rl" style=" margin-left: 1000px; margin-top: 865px; opacity: 0; ">Кнопка 11</button>
+<button onclick='toggleImage3()' class="button" id="button4" style="position: absolute; top: 25%; left: 84.7%; width: 3%; height: 6%; opacity: 0; transform: rotate(-4deg)">Кнопка 4</button>
+<img src="https://cdn.discordapp.com/attachments/703179103276105728/1208900362451558440/-3.png?ex=65e4f732&is=65d28232&hm=2868169d903aea6e2175474c659062081c452c364b9181f5ca0fa6627dde9f40&" id="myImage3" style="display: none; position: absolute;  top: 25%; left: 84.7%; width: 3%; height: 6%; transform: rotate(-3deg)">
 
 
 
 
+<input type="file" id="uploadButton" accept="image/*" style="position: absolute; top: 50%; left: 19%; width: 18.3%; opacity: 0; background-color: transparent; border: none; height: 5%">
+<div id="imageContainer" style="position: absolute; top: 35%; left: 28%; width: 15%; height: 20%; "></div>
 
+<input type="text" id="userInput2" placeholder="Мои пожелание таковы!" style="position: absolute; top: 45%; left: 73%; width: 20%; height: 2%; transform: rotate(-1deg); background-color: transparent; border: none; " >
+
+<button class="button" id="button5" style="position: absolute; top: 59%; left: 16.1%; width: 23.8%; opacity: 0; height: 10%;">Кнопка 5</button>
+
+<input type="text" id="userInput3" placeholder="Введите количество минут..." style="position: absolute; top: 65%; left: 52%; width: 12%; height: 2%; transform: rotate(-8deg); background-color: transparent; border: none;">
+
+<input type="text" id="userInput4" placeholder="Введите название блюда..." style="position: absolute; top: 80%; left: 52%; width: 12%; height: 2%; transform: rotate(-8deg); background-color: transparent; border: none;">
+
+<button class="button" id="button6" style="position: absolute; top: 88%; left: 54%; width: 12%; opacity: 0; height: 10%;">Кнопка 2</button>
 
 
 
